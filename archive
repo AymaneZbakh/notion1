@@ -1,0 +1,31 @@
+<div id="widget-container" style="font-size:18px; font-weight:500; color:#000; width:300px; height:435px;"></div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Create the link element
+    var link = document.createElement('a');
+    link.href = 'https://metar-taf.com/GMMB';
+    link.id = 'metartaf-1fRS359T';
+    link.style.fontSize = '18px';
+    link.style.fontWeight = '500';
+    link.style.color = '#000';
+    link.style.width = '300px';
+    link.style.height = '435px';
+    link.style.display = 'block';
+    link.textContent = 'METAR Ben Slimane Airport';
+    
+    // Append the link to the widget container
+    var container = document.getElementById('widget-container');
+    container.appendChild(link);
+    
+    // Create and load the script element
+    var script = document.createElement('script');
+    script.async = true;
+    script.defer = true;
+    script.crossOrigin = 'anonymous';
+    script.src = 'https://metar-taf.com/embed-js/GMMB?qnh=hPa&rh=rh&target=1fRS359T';
+    
+    // Append the script to the document body
+    document.body.appendChild(script);
+  });
+</script>
